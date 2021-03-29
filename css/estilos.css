@@ -51,6 +51,53 @@
 
 .Main {
   width: 100%;
-  height: 1900px;
-  background-color: #4276FB;
+  height: 3768px;
+  display: flex;
+  padding: 60px 83px 0px 83px;
+}
+
+.column__small {
+  width: 80px;
+  height: 552px;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.column__small__image {
+  width: 100%;
+  height: 120px;
+  cursor: pointer;
+}
+.column__small__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.column__small__image :hover {
+  opacity: 0.5;
+}
+
+.column__Big {
+  width: 616px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation-name: up;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+}
+.column__Big__image {
+  width: 100%;
+  height: 924px;
+}
+
+@keyframes up {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -928px;
+  }
 }
