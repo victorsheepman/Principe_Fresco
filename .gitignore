@@ -1,0 +1,5 @@
+*.fig
+*.scss
+node_modules
+sass
+prepros.config

@@ -1,0 +1,29 @@
+{
+  "name": "principe-fresco",
+  "version": "1.0.0",
+  "description": "Tienda de ropa online basado en la serie el principe del rap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorsheepman/Principe_Fresco.git"
+  },
+  "keywords": [
+    "js",
+    "css",
+    "sass",
+    "html5"
+  ],
+  "author": "Victor Marquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorsheepman/Principe_Fresco/issues"
+  },
+  "homepage": "https://github.com/victorsheepman/Principe_Fresco#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
