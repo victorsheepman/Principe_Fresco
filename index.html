@@ -31,9 +31,9 @@
         </figure>
     </header>
     <section class="Main"> 
-        <div class="Modal">
+        <div class="Modal" id="Modal">
             <div class="Modal__content">
-                <div class="Modal__exit">
+                <div class="Modal__exit" onclick="exitModal()">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.70703 0.292969L0.292969 1.70703L6.58594 8L0.292969 14.293L1.70703 15.707L8 9.41406L14.293 15.707L15.707 14.293L9.41406 8L15.707 1.70703L14.293 0.292969L8 6.58594L1.70703 0.292969Z" fill="#1D1D1D"/>
                     </svg>     
@@ -50,16 +50,23 @@
                     </div>    
                 </div>
                 <div class="Remove">
+                    <div class="Remove__content--border"><span>1</span></div>
+                    <div class="Remove__content"><span>Remove</span></div>
                 </div>
+                <span class="subtotal">Subtotal</span>
+                <span class="subtotal__precio">$85.00</span>
+                <p class="subtotal__parrafo">Shipping, taxes, and discount codes calculated at checkout.</p>
+                <button class="Modal__boton">CHECK OUT</button>
+                <p class="Modal__parrafo">Please Note: All items are pre-order and will ship<br>in 6-10 weeks. Guaranteed holiday delivery.</p>
             </div>
         </div>
         <div class="column__small">
-            <figure class="column__small__image"><img src="images/column__small/Rectangle 1.jpg" alt="" srcset=""></figure>
-            <figure class="column__small__image"><img src="images/column__small/Rectangle 2.jpg" alt="" srcset=""></figure>
+            <figure class="column__small__image" onclick="animationdown()" ><img src="images/column__small/Rectangle 1.jpg" alt="" srcset=""></figure>
+            <figure class="column__small__image" id="imagen_up" onclick="animation()"><img src="images/column__small/Rectangle 2.jpg" alt="" srcset=""></figure>
             <figure class="column__small__image"><img src="images/column__small/Rectangle 3.jpg" alt="" srcset=""></figure>
             <figure class="column__small__image"><img src="images/column__small/Rectangle 4.jpg" alt="" srcset=""></figure>
         </div>
-        <div class="column__Big">
+        <div class="column__Big" id="Big">
             <figure class="column__Big__image">
                 <img src="/images/column__Big/Rectangle 1.jpg" alt="">
             </figure>
@@ -80,7 +87,7 @@
             </div>
             <div class="Menu__botones">
                 <button class="Menu__boton">ADD TO CART</button>
-                <button class="Menu__boton--blue">BUY IT NOW</button>
+                <button class="Menu__boton--blue" onclick="activeModal()">BUY IT NOW</button>
             </div>
             <div class="Menu__size">
                 <span>Size</span>

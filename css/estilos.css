@@ -84,7 +84,7 @@ h4 {
   justify-content: space-between;
 }
 
-.Modal__detalle span, .Menu__size span, .Menu__size div li {
+.subtotal__parrafo, .subtotal, .subtotal__precio, .Remove span, .Modal__detalle span, .Menu__size span, .Menu__size div li {
   font-family: "Poppins", sans-serif;
   font-size: 30px;
   font-weight: 400;
@@ -127,9 +127,7 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  animation-name: up;
-  animation-duration: 1000ms;
-  animation-timing-function: ease-out;
+  animation: down 1000ms ease-in forwards;
 }
 .column__Big__image {
   width: 100%;
@@ -231,6 +229,14 @@ h4 {
     margin-top: -928px;
   }
 }
+@keyframes down {
+  0% {
+    margin-top: -928px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
 .Modal {
   width: 100%;
   height: 100vh;
@@ -238,6 +244,8 @@ h4 {
   position: fixed;
   top: 0px;
   left: 0px;
+  display: none;
+  transition: ease 0.3 all;
 }
 .Modal__content {
   width: 460px;
@@ -246,6 +254,8 @@ h4 {
   left: 906px;
   background-color: #FFFFFF;
   position: relative;
+  padding-left: 40px;
+  padding-top: 40px;
 }
 .Modal__exit {
   width: 24px;
@@ -259,7 +269,6 @@ h4 {
   width: 259px;
   height: 115px;
   top: 95px;
-  left: 40px;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -278,12 +287,70 @@ h4 {
 .Modal__detalle span, .Modal__detalle .Menu__size div li, .Menu__size div .Modal__detalle li {
   font-size: 20px;
 }
+.Modal__boton {
+  width: 424px;
+  height: 56px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  background-color: #4276FB;
+  border: 4px solid #4276FB;
+  width: 380px;
+  position: absolute;
+  top: 458px;
+}
+.Modal__boton :hover {
+  background-color: #FFFFFF;
+  color: #4276FB;
+}
+.Modal__parrafo {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  position: absolute;
+  top: 546px;
+}
 
 .Remove {
   width: 82px;
   height: 80px;
-  background-color: black;
   position: absolute;
   top: 105px;
   left: 338px;
 }
+.Remove__content {
+  width: 100%;
+  height: 50%;
+}
+.Remove__content--border {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #1D1D1D;
+}
+.Remove span, .Remove .Menu__size div li, .Menu__size div .Remove li {
+  font-size: 20px;
+}
+
+.subtotal, .subtotal__precio {
+  font-size: 20px;
+  position: absolute;
+  top: 339px;
+}
+.subtotal__precio {
+  left: 353px;
+}
+.subtotal__parrafo {
+  color: #4A4A4A;
+  font-size: 12px;
+  position: absolute;
+  top: 418px;
+}
+
+@keyframes open {}
