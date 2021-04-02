@@ -8,6 +8,19 @@ const instance = basicScroll.create({
 			to: '304px'
 		}
 	}
+});
+
+const wallaper = basicScroll.create({
+	elem: document.querySelector('#wallaper'),
+	from: 'top-bottom',
+	to: 'middle-middle',
+	props: {
+		'--opacidad': {
+			from: 0,
+			to: 1
+		}
+	}
 })
 
 instance.start()
+wallaper.start()

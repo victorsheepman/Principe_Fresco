@@ -11,18 +11,62 @@ function activeModal(){
     let letras = document.getElementById("letras");
     let main = document.getElementById("Main");
     let producto = document.getElementById("Producto");
+    let footer = document.getElementById("footer"); 
+    let column = document.getElementById("Big");
+    animacionBtn();
+    
     modal.style.display="block";
     letras.style.display="none";
     producto.style.display="none";
-    main.style.height="100vh";
+
+    main.style.height="100%";
+    main.style.position="absolute";
+    main.style.top="82px";
+    main.style.left="0";
+    main.style.right="0";
+    main.style.bottom="0";
+
+    footer.style.display="none";
+   
+    column.style.height="100vh";
+    column.style.overflow="hidden";
 }
 function exitModal() {
     let modal=document.getElementById("Modal");
     let letras = document.getElementById("letras");
     let producto = document.getElementById("Producto");
     let main = document.getElementById("Main");
+    let column = document.getElementById("Big");
+
+    animationReverse();
     modal.style.display="none";
     letras.style.display="flex";
     producto.style.display="flex";
     main.style.height='3768px';
+    footer.style.display="block";
+        
+    main.style.position="unset";
+    main.style.top="0px";
+    main.style.left="0";
+    main.style.right="0";
+    main.style.bottom="0";
+
+    column.style.height="100%";
+    column.style.overflow="unset";
 }
+
+
+function animacionBtn() {
+    let menuBtn= document.getElementById("Menu__botones");
+    let menuSize = document.getElementById("Menu__size");
+    menuBtn.style.animation="colum-r .5s linear forwards";
+    menuSize.style.animation = "column-size .5s ease-in forwards";
+
+}
+function animationReverse() {
+    let menuBtn= document.getElementById("Menu__botones");
+    let menuSize = document.getElementById("Menu__size");
+    menuBtn.style.animation="colum-reverse .5s linear";
+    menuSize.style.animation = " columno-size-reverse .5s linear"
+}
+
