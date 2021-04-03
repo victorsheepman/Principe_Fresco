@@ -59,14 +59,14 @@ function exitModal() {
 function animacionBtn() {
     let menuBtn= document.getElementById("Menu__botones");
     let menuSize = document.getElementById("Menu__size");
-    menuBtn.style.animation="colum-r .5s linear forwards";
-    menuSize.style.animation = "column-size .5s ease-in forwards";
+    menuBtn.style.animation="colum-r .3s linear forwards";
+    menuSize.style.animation = "column-size .3s ease-in forwards";
 
 }
 function animationReverse() {
     let menuBtn= document.getElementById("Menu__botones");
     let menuSize = document.getElementById("Menu__size");
-    menuBtn.style.animation="colum-reverse .5s linear";
+    menuBtn.style.animation="colum-reverse .3s linear";
     menuSize.style.animation = " columno-size-reverse .5s linear"
 }
 
